@@ -1,0 +1,36 @@
+<br>
+<div align="right">
+<b><%= @log.name %></b> さん，権限：
+<b><%= case @log.position
+    when '1','3','5' then
+      position = "担当者"
+    else
+      position = "承認者"
+    end
+%></b>
+
+<//div>
+<hr>
+
+<div align="center">
+
+<br><br>
+<h2>
+<table border=0 width="400" height="200" bgcolor=azure>
+  <tr><th bgcolor=skyblue>不具合管理システム　業務選択画面</th></tr>
+  <tr><td><h2><%= link_to "不具合管理簿　＜一覧＞", bugreports_path %></h2><hr></td></tr>
+  <tr><td><h2><%= link_to "不具合管理簿　＜新規＞", new_bugreport_path %></h2><hr></td></tr>
+
+<!--　うーーん、わかんない
+  <tr>
+   <td><h2><%= link_to "不具合管理簿　＜修正＞", edit_bugreport_path(:id) %></h2>
+       <h3>不具合管理番号　ST-CIS-<input type="text" id="id" size="10"></h3>
+   </td></tr>
+-->
+
+</table>
+</h2>
+<br><br><br><br>
+<%= link_to "ログアウト", bugreport_logout_path %>
+
+</div

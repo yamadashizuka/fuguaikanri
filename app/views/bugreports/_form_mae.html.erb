@@ -1,0 +1,153 @@
+<%= form_for(@bugreport) do |f| %>
+  <% if @bugreport.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bugreport.errors.count, "error") %> prohibited this bugreport from being saved:</h2>
+
+      <ul>
+      <% @bugreport.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bhyo_no %><br />
+    <%= f.text_field :bhyo_no %>
+  </div>
+  <div class="field">
+    <%= f.label :hakosha %><br />
+    <%= f.text_field :hakosha %>
+  </div>
+  <div class="field">
+    <%= f.label :hako_ymd %><br />
+    <%= f.text_field :hako_ymd %>
+  </div>
+  <div class="field">
+    <%= f.label :kenmei %><br />
+    <%= f.text_field :kenmei %>
+  </div>
+  <div class="field">
+    <%= f.label :systemmei %><br />
+    <%= f.text_field :systemmei %>
+  </div>
+  <div class="field">
+    <%= f.label :kotei_kubun %><br />
+    <%= f.text_field :kotei_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :kinomei %><br />
+    <%= f.text_field :kinomei %>
+  </div>
+  <div class="field">
+    <%= f.label :saigensei %><br />
+    <%= f.text_field :saigensei %>
+  </div>
+  <div class="field">
+    <%= f.label :taisyoirai %><br />
+    <%= f.text_field :taisyoirai %>
+  </div>
+  <div class="field">
+    <%= f.label :judaido %><br />
+    <%= f.text_field :judaido %>
+  </div>
+  <div class="field">
+    <%= f.label :taisyokibo_ymd %><br />
+    <%= f.text_field :taisyokibo_ymd %>
+  </div>
+  <div class="field">
+    <%= f.label :hasseikankyo %><br />
+    <%= f.text_field :hasseikankyo %>
+  </div>
+  <div class="field">
+    <%= f.label :fuguaitenpu_kubun %><br />
+    <%= f.text_field :fuguaitenpu_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :hasseinaiyo %><br />
+    <%= f.text_area :hasseinaiyo %>
+  </div>
+  <div class="field">
+    <%= f.label :genin_kubun %><br />
+    <%= f.text_field :genin_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :kensyutukotei %><br />
+    <%= f.text_field :kensyutukotei %>
+  </div>
+  <div class="field">
+    <%= f.label :taisyo_kubun %><br />
+    <%= f.text_field :taisyo_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :sihen_no %><br />
+    <%= f.text_field :sihen_no %>
+  </div>
+  <div class="field">
+    <%= f.label :syori_kubun %><br />
+    <%= f.text_field :syori_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :tyofuku_kubun %><br />
+    <%= f.text_field :tyofuku_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :tyofuku_no %><br />
+    <%= f.text_field :tyofuku_no %>
+  </div>
+  <div class="field">
+    <%= f.label :taisyotenpu_kubun %><br />
+    <%= f.text_field :taisyotenpu_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :kaisekikekka %><br />
+    <%= f.text_field :kaisekikekka %>
+  </div>
+  <div class="field">
+    <%= f.label :kaito_ymd %><br />
+    <%= f.text_field :kaito_ymd %>
+  </div>
+  <div class="field">
+    <%= f.label :kaitosha %><br />
+    <%= f.text_field :kaitosha %>
+  </div>
+  <div class="field">
+    <%= f.label :taisyosyoti %><br />
+    <%= f.text_field :taisyosyoti %>
+  </div>
+  <div class="field">
+    <%= f.label :taisyoyotei_ymd %><br />
+    <%= f.text_field :taisyoyotei_ymd %>
+  </div>
+  <div class="field">
+    <%= f.label :taisyo_ymd %><br />
+    <%= f.text_field :taisyo_ymd %>
+  </div>
+  <div class="field">
+    <%= f.label :taisyosha %><br />
+    <%= f.text_field :taisyosha %>
+  </div>
+  <div class="field">
+    <%= f.label :taisyobutumei %><br />
+    <%= f.text_field :taisyobutumei %>
+  </div>
+  <div class="field">
+    <%= f.label :kanryo_ymd %><br />
+    <%= f.text_field :kanryo_ymd %>
+  </div>
+  <div class="field">
+    <%= f.label :kakuninsha %><br />
+    <%= f.text_field :kakuninsha %>
+  </div>
+  <div class="field">
+    <%= f.label :status_kubun %><br />
+    <%= f.text_field :status_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :biko %><br />
+    <%= f.text_area :biko %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
