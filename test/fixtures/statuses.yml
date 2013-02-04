@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  status_kubun: 1
+  status: "OPEN"
+
+two:
+  status_kubun: 2
+  status: "CLOSE

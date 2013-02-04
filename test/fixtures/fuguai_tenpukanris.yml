@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fuguai_no: MyString
+  toshi_no: MyString
+  tenpu: MyString
+
+two:
+  fuguai_no: MyString
+  toshi_no: MyString
+  tenpu: MyString
