@@ -10,7 +10,7 @@ class CreateFuguais < ActiveRecord::Migration
       t.string :kotei_kubun
       t.string :kinomei
       t.string :saigensei
-      t.sting :taisyoirai_ymd
+      t.string :taisyoirai_ymd
       t.string :judaido
       t.string :hasseikankyo
       t.string :fuguaitenpu_kubun
