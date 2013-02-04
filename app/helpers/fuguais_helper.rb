@@ -1,0 +1,2 @@
+module FuguaisHelper
+end
