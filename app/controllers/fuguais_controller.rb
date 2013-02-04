@@ -1,4 +1,8 @@
 class FuguaisController < ApplicationController
+  #業務選択画面用メソッド
+  def gyosen
+  end
+
   # GET /fuguais
   # GET /fuguais.json
   def index
