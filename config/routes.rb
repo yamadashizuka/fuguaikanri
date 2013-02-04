@@ -1,10 +1,13 @@
 Fuguaikanri::Application.routes.draw do
 
+  match 'fuguais/gyosen' => 'fuguais#gyosen'
   resources :fuguais
 
 #ルートにアクセスしてきたらtopメソッドを起動してtop.htmlを表示
 
   root :to => 'fuguais#gyosen'
+  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
