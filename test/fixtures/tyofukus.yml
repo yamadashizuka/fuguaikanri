@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tyofuku_kubun: 1
+  tyofuku_meisyo: "新規"
+
+two:
+  tyofuku_kubun: 2
+  tyofuku_meisyo: "重複"

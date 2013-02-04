@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  gyomusizi_kubun: 1
+  gyomusizi_meisyo: "001 一覧"
+
+two:
+  gyomusizi_kubun: 2
+  gyomusizi_meisyo: "002 新規登録"

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  genin_kubun: 1
+  genin_meisyo: "仕様不備"
+
+two:
+  genin_kubun: 2
+  genin_meisyo: "設計不備"
+  
+three:
+  genin_kubun: 3
+  genin_meisyo: "プログラム不備"
+
+four:
+  genin_kubun: 4
+  genin_meisyo: "データ・環境設定不備"
+
+five:
+  genin_kubun: 5
+  genin_meisyo: "プログラム配布誤り"
+
+six:
+  genin_kubun: 6
+  genin_meisyo: "デグレーション"
+  
+seven:
+  genin_kubun: 7
+  genin_meisyo: "テストケース設定内容不備"
+
+eight:
+  genin_kubun: 8
+  genin_meisyo: "発行者誤検出"
