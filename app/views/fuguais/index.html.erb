@@ -1,89 +1,144 @@
-<h1>Listing fuguais</h1>
+<center><h1>不具合管理簿</h1></center>
 
+<!--
 <table>
+-->
+<div style="margin:0px;padding:0px;" align="center">
+<!--
+<table width="98%" style="border-collapse: collapse;border:2px solid #000000;background-color:#FFFFFF;color:#000000;text-align:center;">
+-->
+
+<table width="1280px" style="border-collapse: collapse;border:2px solid #000000;background-color:#FFFFFF;color:#000000;text-align:center;">
+<tbody>
   <tr>
-    <th>Fuguai no</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">不具合No.</th>
+    <!--
     <th>Bhyo no</th>
-    <th>Hakosya</th>
-    <th>Hako ymd</th>
-    <th>Kenmei</th>
+    -->
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">発行者</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">発行日</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">件名</th>
+    <!--    
     <th>Systemmei</th>
     <th>Kotei kubun</th>
     <th>Kinomei</th>
-    <th>Saigensei</th>
-    <th>Taisyoirai ymd</th>
-    <th>Judaido</th>
-    <th>Hasseikankyo</th>
+     -->
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">再現性</th>
+    <!--
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">依頼日</th>
+    -->
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">重大度</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">発生環境</th>
+    <!--
     <th>Fuguaitenpu kubun</th>
     <th>Hasseinaiyo</th>
-    <th>Genin kubun</th>
+    -->
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">原因</th>
+    <!--
     <th>Kensyutukotei</th>
-    <th>Taisyo kubun</th>
-    <th>Sihen no</th>
+    -->
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">対処区分</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">仕変No.</th>
+        <!--
     <th>Syori kubun</th>
-    <th>Tyofuku kubun</th>
+    -->
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">重複</th>
+        <!--
     <th>Tyofuku no</th>
     <th>Taisyotenpu kubun</th>
     <th>Kaisekikekka</th>
     <th>Kaito ymd</th>
     <th>Kaitosya</th>
     <th>Taisyosyoti</th>
-    <th>Taisyoyotei ymd</th>
-    <th>Taisyo ymd</th>
+    -->
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">対処予定日</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">対処日</th>
+    <!--
     <th>Taisyosya</th>
     <th>Taisyobutumei</th>
-    <th>Kanryo ymd</th>
+    -->
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">完了日</th>
+    <!--    
     <th>Kakuninsya</th>
-    <th>Status kubun</th>
-    <th>Biko</th>
+    -->
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">ステータス</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">備考</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">詳細</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">修正</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">削除</th>
+    <!--
     <th></th>
     <th></th>
     <th></th>
+    -->
   </tr>
+  
+
+
 
 <% @fuguais.each do |fuguai| %>
   <tr>
-    <td><%= fuguai.fuguai_no %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.fuguai_no %></td>
+    <!--
     <td><%= fuguai.bhyo_no %></td>
-    <td><%= fuguai.hakosya %></td>
-    <td><%= fuguai.hako_ymd %></td>
-    <td><%= fuguai.kenmei %></td>
+    -->
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.hakosya %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.hako_ymd %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.kenmei %></td>
+    <!--    
     <td><%= fuguai.systemmei %></td>
     <td><%= fuguai.kotei_kubun %></td>
     <td><%= fuguai.kinomei %></td>
-    <td><%= fuguai.saigensei %></td>
-    <td><%= fuguai.taisyoirai_ymd %></td>
-    <td><%= fuguai.judaido %></td>
-    <td><%= fuguai.hasseikankyo %></td>
+    -->
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.saigensei %></td>
+    <!--
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.taisyoirai_ymd %></td>
+    -->
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.judaido %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.hasseikankyo %></td>
+    <!--
     <td><%= fuguai.fuguaitenpu_kubun %></td>
     <td><%= fuguai.hasseinaiyo %></td>
-    <td><%= fuguai.genin_kubun %></td>
+    -->
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.genin_kubun %></td>
+    <!--
     <td><%= fuguai.kensyutukotei %></td>
-    <td><%= fuguai.taisyo_kubun %></td>
-    <td><%= fuguai.sihen_no %></td>
+    -->
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.taisyo_kubun %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.sihen_no %></td>
+    <!--   
     <td><%= fuguai.syori_kubun %></td>
-    <td><%= fuguai.tyofuku_kubun %></td>
+    -->
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.tyofuku_kubun %></td>
+    <!--    
     <td><%= fuguai.tyofuku_no %></td>
     <td><%= fuguai.taisyotenpu_kubun %></td>
     <td><%= fuguai.kaisekikekka %></td>
     <td><%= fuguai.kaito_ymd %></td>
-    <td><%= fuguai.kaitosya %></td>
+    <td><%= fuguai.kaitosya %></td>    
     <td><%= fuguai.taisyosyoti %></td>
-    <td><%= fuguai.taisyoyotei_ymd %></td>
-    <td><%= fuguai.taisyo_ymd %></td>
+    -->
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.taisyoyotei_ymd %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.taisyo_ymd %></td>
+    <!--    
     <td><%= fuguai.taisyosya %></td>
     <td><%= fuguai.taisyobutumei %></td>
-    <td><%= fuguai.kanryo_ymd %></td>
+    -->
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.kanryo_ymd %></td>
+    <!--
     <td><%= fuguai.kakuninsya %></td>
-    <td><%= fuguai.status_kubun %></td>
-    <td><%= fuguai.biko %></td>
-    <td><%= link_to 'Show', fuguai %></td>
-    <td><%= link_to 'Edit', edit_fuguai_path(fuguai) %></td>
-    <td><%= link_to 'Destroy', fuguai, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    -->
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.status_kubun %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.biko %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= link_to '詳細', fuguai %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= link_to '訂正', edit_fuguai_path(fuguai) %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= link_to '削除', fuguai, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
-</table>
 
+</tbody>
+</table>
+</div>
 <br />
 
 <%= link_to 'New Fuguai', new_fuguai_path %>
