@@ -1,0 +1,73 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fuguai_no: MyString
+  bhyo_no: MyString
+  hakosya: MyString
+  hako_ymd: MyString
+  kenmei: MyString
+  systemmei: MyString
+  kotei_kubun: MyString
+  kinomei: MyString
+  saigensei: MyString
+  taisyoirai_ymd: 
+  judaido: MyString
+  hasseikankyo: MyString
+  fuguaitenpu_kubun: MyString
+  hasseinaiyo: MyText
+  genin_kubun: MyString
+  kensyutukotei: MyString
+  taisyo_kubun: MyString
+  sihen_no: MyString
+  syori_kubun: MyString
+  tyofuku_kubun: MyString
+  tyofuku_no: MyString
+  taisyotenpu_kubun: MyString
+  kaisekikekka: MyText
+  kaito_ymd: MyString
+  kaitosya: MyString
+  taisyosyoti: MyText
+  taisyoyotei_ymd: MyString
+  taisyo_ymd: MyString
+  taisyosya: MyString
+  taisyobutumei: MyString
+  kanryo_ymd: MyString
+  kakuninsya: MyString
+  status_kubun: MyString
+  biko: MyText
+
+two:
+  fuguai_no: MyString
+  bhyo_no: MyString
+  hakosya: MyString
+  hako_ymd: MyString
+  kenmei: MyString
+  systemmei: MyString
+  kotei_kubun: MyString
+  kinomei: MyString
+  saigensei: MyString
+  taisyoirai_ymd: 
+  judaido: MyString
+  hasseikankyo: MyString
+  fuguaitenpu_kubun: MyString
+  hasseinaiyo: MyText
+  genin_kubun: MyString
+  kensyutukotei: MyString
+  taisyo_kubun: MyString
+  sihen_no: MyString
+  syori_kubun: MyString
+  tyofuku_kubun: MyString
+  tyofuku_no: MyString
+  taisyotenpu_kubun: MyString
+  kaisekikekka: MyText
+  kaito_ymd: MyString
+  kaitosya: MyString
+  taisyosyoti: MyText
+  taisyoyotei_ymd: MyString
+  taisyo_ymd: MyString
+  taisyosya: MyString
+  taisyobutumei: MyString
+  kanryo_ymd: MyString
+  kakuninsya: MyString
+  status_kubun: MyString
+  biko: MyText
