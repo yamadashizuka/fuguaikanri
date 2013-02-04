@@ -1,4 +1,12 @@
 Fuguaikanri::Application.routes.draw do
+  resources :bugreports
+
+#ルートにアクセスしてきたらtopメソッドを起動してtop.htmlを表示
+  root :to => 'bugreports#top'
+
+#
+  match '/bugreport/logout' => 'bugreports#logout'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
