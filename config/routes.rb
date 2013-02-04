@@ -1,6 +1,9 @@
 Fuguaikanri::Application.routes.draw do
   resources :fuguais
 
+  #ページのrootを業務選択画面にします
+   root :to => 'fuguais#gyosen'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
