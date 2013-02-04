@@ -1,4 +1,6 @@
 Fuguaikanri::Application.routes.draw do
+
+
   resources :fuguais
 
   #ページのrootを業務選択画面にします
