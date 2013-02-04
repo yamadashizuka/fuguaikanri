@@ -9,6 +9,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+
 module Fuguaikanri
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -35,6 +36,8 @@ module Fuguaikanri
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
+    config.i18n.default_locale = :ja
+    config.time_zone = 'Tokyo'
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]

@@ -1,0 +1,107 @@
+<h1>不具合管理簿＜一覧＞</h1>
+
+<table border=2 cellspacing=0 cellpadding=2>
+  <tr bgcolor=skyblue>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>不具合管理No.</th>
+    <th>Ｂ票No.</th>
+    <th>発行者</th>
+    <th>発行日</th>
+    <th>件名</th>
+    <th>システム名</th>
+    <th>工程区分</th>
+    <th>機能名(発生箇所名)</th>
+<!--
+    <th>再現性</th>
+    <th>対処依頼先</th>
+    <th>重大度</th>
+    <th>対処希望日</th>
+    <th>発生環境</th>
+    <th>不具合添付資料区分</th>
+-->
+    <th>発生内容</th>
+    <th>原因区分</th>
+<!--
+    <th>検出されるべきテスト工程</th>
+    <th>対処区分</th>
+    <th>仕様変更管理No.</th>
+    <th>処理区分</th>
+    <th>重複区分</th>
+    <th>重複不具合No.(初出)</th>
+    <th>対処添付資料区分</th>
+-->
+    <th>解析結果/原因</th>
+<!--
+    <th>回答日</th>
+    <th>回答者</th>
+-->
+    <th>対処処置</th>
+    <th>対処予定日</th>
+    <th>対処日</th>
+    <th>対処者</th>
+<!--
+    <th>対処物名称</th>
+    <th>完了確認日</th>
+    <th>確認者</th>
+-->
+    <th>ステータス区分</th>
+    <th>備考</th>
+  </tr>
+
+<% @bugreports.each do |bugreport| %>
+  <tr bgcolor=mintcream>
+    <td><%= link_to '詳細', bugreport %></td>
+    <td><%= link_to '修正', edit_bugreport_path(bugreport) %></td>
+    <td><%= link_to '削除', bugreport, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= bugreport.id %></td>
+    <td><%= bugreport.bhyo_no %></td>
+    <td><%= bugreport.hakosha %></td>
+    <td><%= bugreport.hako_ymd %></td>
+    <td><%= bugreport.kenmei %></td>
+    <td><%= bugreport.systemmei %></td>
+    <td><%= bugreport.kotei_kubun %></td>
+    <td><%= bugreport.kinomei %></td>
+<!--
+    <td><%= bugreport.saigensei %></td>
+    <td><%= bugreport.taisyoirai %></td>
+    <td><%= bugreport.judaido %></td>
+    <td><%= bugreport.taisyokibo_ymd %></td>
+    <td><%= bugreport.hasseikankyo %></td>
+    <td><%= bugreport.fuguaitenpu_kubun %></td>
+-->
+    <td><%= bugreport.hasseinaiyo %></td>
+    <td><%= bugreport.genin_kubun %></td>
+<!--
+    <td><%= bugreport.kensyutukotei %></td>
+    <td><%= bugreport.taisyo_kubun %></td>
+    <td><%= bugreport.sihen_no %></td>
+    <td><%= bugreport.syori_kubun %></td>
+    <td><%= bugreport.tyofuku_kubun %></td>
+    <td><%= bugreport.tyofuku_no %></td>
+    <td><%= bugreport.taisyotenpu_kubun %></td>
+-->
+    <td><%= bugreport.kaisekikekka %></td>
+<!--
+    <td><%= bugreport.kaito_ymd %></td>
+    <td><%= bugreport.kaitosha %></td>
+-->
+    <td><%= bugreport.taisyosyoti %></td>
+    <td><%= bugreport.taisyoyotei_ymd %></td>
+    <td><%= bugreport.taisyo_ymd %></td>
+    <td><%= bugreport.taisyosha %></td>
+<!--
+    <td><%= bugreport.taisyobutumei %></td>
+    <td><%= bugreport.kanryo_ymd %></td>
+    <td><%= bugreport.kakuninsha %></td>
+-->
+    <td><%= bugreport.status_kubun %></td>
+    <td><%= bugreport.biko %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '業務選択画面', root_path %>

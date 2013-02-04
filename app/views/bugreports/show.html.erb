@@ -1,0 +1,179 @@
+<p id="notice"><%= notice %></p>
+
+<!-- ヘッダ部分 -->
+<table border=0 width=1320>
+<tr>
+  <td><font size=7>不具合管理票</font></td>
+  <td>
+    <table border=1 width=300 cellspacing=0 cellpadding=3>
+      <tr>
+        <th bgcolor=lightskyblue>不具合管理No.</th>
+        <td>ST-CIS-<%= @bugreport.id %></td>
+      </tr>
+      <tr>
+        <th bgcolor=lightskyblue>Ｂ票No.</th>
+        <td><%= @bugreport.bhyo_no %></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+<hr>
+
+<!-- 不具合情報部分 -->
+<table bgcolor=mintcream border=1 width=950 cellspacing=0 cellpadding=3>
+<tr>
+  <tr>
+    <th  bgcolor=lightskyblue width=10 rowspan=11 >不具合情報</th>
+  </tr>
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightskyblue>発行者</th>
+    <td width=90 colspan=3><%= @bugreport.hakosha %></td>
+    <th width=90 colspan=1 bgcolor=lightskyblue>発行年月日</th>
+    <td width=90 colspan=2><%= @bugreport.hako_ymd %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>件名</th>
+    <td width=90 colspan=8><%= @bugreport.kenmei %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>システム名</th>
+    <td width=90 colspan=5><%= @bugreport.systemmei %></td>
+    <th width=90 colspan=1 bgcolor=lightskyblue>工程</th>
+    <td width=90 colspan=2><%= @bugreport.kotei_kubun %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>機能名<br>(発生箇所名)</th>
+    <td width=90 colspan=5><%= @bugreport.kinomei %></td>
+    <th width=90 colspan=1 bgcolor=lightskyblue>再現性<br>(あり･なし)</th>
+    <td width=90 colspan=2><%= @bugreport.saigensei %></td>
+ </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>重大度<br>(大・中・小)</th>
+    <td width=90 colspan=1><%= @bugreport.judaido %></td>
+    <th width=90 colspan=1 bgcolor=lightskyblue>対処希望日</th>
+    <td width=90 colspan=2><%= @bugreport.taisyokibo_ymd %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>発生環境</th>
+    <td width=90 colspan=6><%= @bugreport.hasseikankyo %></td>
+    <th width=90 colspan=1 bgcolor=lightskyblue>不具合資料<br>添付区分</th>
+    <td width=90 colspan=1><%= @bugreport.fuguaitenpu_kubun %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=10 bgcolor=lightskyblue>発生内容</th>
+  </tr>
+
+  <tr>
+    <td width=90 height=250 colspan=10 ><%= @bugreport.hasseinaiyo %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>対処依頼先</th>
+    <td width=90 colspan=4><%= @bugreport.taisyoirai %></td>
+  </tr>
+
+</tr>
+</table>
+
+
+<!-- 対処情報部分 -->
+<table bgcolor=lightcyan border=1 width=950 cellspacing=0 cellpadding=3>
+<tr>
+  <tr>
+    <th  bgcolor=lightgreen width=10 rowspan=11 >対処情報</th>
+  </tr>
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>原因区分</th>
+    <td width=90 colspan=2><%= @bugreport.genin_kubun %></td>
+    <th width=90 colspan=2 bgcolor=lightgreen>検出されるべき工程</th>
+    <td width=90 colspan=3><%= @bugreport.kensyutukotei %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処区分</th>
+    <td width=90 colspan=2><%= @bugreport.taisyo_kubun %></td>
+    <th width=90 colspan=3 bgcolor=lightgreen>仕様変更管理No.</th>
+    <td width=90 colspan=2><%= @bugreport.sihen_no %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>処置区分</th>
+    <td width=90 colspan=2><%= @bugreport.syori_kubun %></td>
+    <th width=90 colspan=1 bgcolor=lightgreen>重複区分</th>
+    <td width=90 colspan=1><%= @bugreport.tyofuku_kubun %></td>
+    <th width=90 colspan=3 bgcolor=lightgreen>重複不具合No.</th>
+    <td width=90 colspan=3><%= @bugreport.tyofuku_no %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=4 bgcolor=lightgreen>解析結果/原因</th>
+    <th width=90 colspan=3 bgcolor=lightgreen>対処添付資料区分</th>
+    <td width=90 colspan=2><%= @bugreport.taisyotenpu_kubun %></td>
+  </tr>
+
+  <tr>
+    <td width=90 colspan=11 height=250><%= @bugreport.kaisekikekka %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>回答日</th>
+    <td width=90 colspan=2><%= @bugreport.kaito_ymd %></td>
+    <th width=90 colspan=1 bgcolor=lightgreen>回答者</th>
+    <td width=90 colspan=3><%= @bugreport.kaitosha %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処処置</th>
+    <td width=90 colspan=10 height=80><%= @bugreport.taisyosyoti %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処予定日</th>
+    <td width=90 colspan=2><%= @bugreport.taisyoyotei_ymd %></td>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処日</th>
+    <td width=90 colspan=1><%= @bugreport.taisyo_ymd %></td>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処者</th>
+    <td width=90 colspan=3><%= @bugreport.taisyosha %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処物名称</th>
+    <td width=90 colspan=10 height=80><%= @bugreport.taisyobutumei %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>完了確認日</th>
+    <td width=90 colspan=2><%= @bugreport.kanryo_ymd %></td>
+
+    <th width=90 colspan=1 bgcolor=lightgreen>完了確認者</th>
+    <td width=90 colspan=2><%= @bugreport.kakuninsha %></td>
+    <th width=90 colspan=1 bgcolor=lightgreen>ステータス</th>
+    <td width=90 colspan=4><%= @bugreport.status_kubun %></td>
+  </tr>
+
+</tr>
+</table>
+
+<!-- 備考部分 -->
+<table bgcolor=floralwhite border=1 width=950 cellspacing=0 cellpadding=3>
+<tr>
+  <tr>
+    <th bgcolor=lightpink width=10 height=150>備考</th>
+    <td><%= @bugreport.biko %></td>
+  </tr>
+</tr>
+</table>
+
+<br><hr><br>
+
+<%= link_to '業務選択画面', root_path %> |
+<%= link_to '個票編集', edit_bugreport_path(@bugreport) %> |
+<%= link_to '一覧', bugreports_path %>
