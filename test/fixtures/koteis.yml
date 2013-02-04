@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  kotei_kubun: 1
+  kotei_meisyo: "単体テスト"
+
+two:
+  kotei_kubun: 2
+  kotei_meisyo: "結合テスト"
+  
+three:
+  kotei_kubun: 3
+  kotei_meisyo: "総合テスト"
+
+four:
+  kotei_kubun: 4
+  kotei_meisyo: "移行"
+  
+five
+  kotei_kubun: 5
+  kotei_meisyo: "その他"

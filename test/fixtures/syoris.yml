@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  syori_kubun: 1
+  syori_meisyo: "不備修正"
+
+two:
+  syori_kubun: 2
+  syori_meisyo: "仕様変更（対処区分が「１．修正」の場合に記入"

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tenpu_kubun: 1
+  tenpu_meisyo: "なし"
+
+two:
+  tenpu_kubun: 2
+  tenpu_meisyo: "電子媒体"
+  
+three:
+  tenpu_kubun: 3
+  tenpu_meisyo: "紙"
+
+four:
+  tenpu_kubun: 4
+  tenpu_meisyo: "両方"

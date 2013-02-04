@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  taisyo_kubun: 1
+  taisyo_meisyo: "修正"
+
+two:
+  taisyo_kubun: 2
+  taisyo_meisyo: "対処不要"
+  
+three:
+  taisyo_kubun: 3
+  taisyo_meisyo: "再現待ち"
+
+four:
+  taisyo_kubun: 4
+  taisyo_meisyo: "暫定処置"
+
+five:
+  taisyo_kubun: 5
+  taisyo_meisyo: "総合テスト（総合テスト以降で記入）"
+  
