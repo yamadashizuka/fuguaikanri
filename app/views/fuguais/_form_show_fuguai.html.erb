@@ -16,42 +16,42 @@
   <tr>
     <td rowspan=9 bgcolor=skyblue><br>不</br><br>具</br><br>合</br><br>情</br><br>報</br></td>
     <td bgcolor=skyblue>発行者</td>
-    <td></td>
+    <td><%= @fuguai.hakosya %></td>
     <td bgcolor=skyblue>発生日</td>
     <td><%= @fuguai.hako_ymd %></td>
   </tr>
   <tr>
     <td bgcolor=skyblue>件名</td>
-    <td></td>
+    <td><%= @fuguai.kenmei %></td>
   </tr>
   <tr>
     <td bgcolor=skyblue>システム名</td>
-    <td></td>
+    <td><%= @fuguai.systemmei %></td>
     <td bgcolor=skyblue>工程</td>
-    <td></td>
+    <td><%= @fuguai.kotei_kubun %></td>
   </tr>
   <tr>
     <td bgcolor=skyblue>機能名（発生箇所名）</td>
-    <td></td>
+    <td><%= @fuguai.kinomei %></td>
     <td bgcolor=skyblue>再現性</td>
-    <td></td>
+    <td><%= @fuguai.saigensei %></td>
   </tr>
   <tr>
     <td bgcolor=skyblue>対処依頼先</td>
-    <td></td>
+    <td><%= @fuguai.taisyoirai_ymd %></td>
   </tr>
   <tr>
     <td bgcolor=skyblue>重大度（大、中、小）</td>
-    <td></td>
+    <td><%= @fuguai.judaido %></td>
     <td bgcolor=skyblue>対処希望日</td>
-    <th></td>
+    <td></td>
   </tr>
   <tr>
     <td bgcolor=skyblue>発生環境</td>
     <td><%= @fuguai.hasseikankyo %></td>
   </tr>
   <tr>
-    <td bgcolor=skyblue>発生内容<th>
+    <td bgcolor=skyblue>発生内容</td>
     <td bgcolor=skyblue>添付資料（１.なし、２.電子媒体、３.紙、４.両方）</td>
     <td><%= @fuguai.fuguaitenpu_kubun %></td>
   </tr>
