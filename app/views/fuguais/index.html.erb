@@ -92,7 +92,7 @@
     -->
     <td style="border:2px solid #000000;text-align:center;"><%= fuguai.saigensei %></td>
     <!--
-    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.taisyoirai_ymd %></td>
+    <td style="border:2px solid #000000;text-align:center;"><%= fuguai.taisyoirai %></td>
     -->
     <td style="border:2px solid #000000;text-align:center;"><%= fuguai.judaido %></td>
     <td style="border:2px solid #000000;text-align:center;"><%= fuguai.hasseikankyo %></td>
@@ -135,10 +135,30 @@
     <td style="border:2px solid #000000;text-align:center;"><%= link_to '削除', fuguai, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+ 
 
 </tbody>
 </table>
 </div>
 <br />
 
-<%= link_to 'New Fuguai', new_fuguai_path %>
+<%= form_tag :action => 'search' %>
+ステータス：
+<%= select( "drop_list", "status", @statuses) %>
+<%= submit_tag "検索"%>
+</form>
+
+<%= form_tag :action => 'search' %>
+発行者：
+<%= select( "drop_list", "status", @hakosyas) %>
+<%= submit_tag "検索"%>
+</form>
+
+<%= form_tag :action => 'search' %>
+発行日：
+<%= select( "drop_list", "status", @hakoymds) %>
+<%= submit_tag "検索"%>
+</form>
+
+<%= link_to '新規登録', new_fuguai_path %>
+<%= link_to '一覧検索', fuguais_path %>
