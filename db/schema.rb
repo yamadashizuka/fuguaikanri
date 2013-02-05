@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205004759) do
+ActiveRecord::Schema.define(:version => 20130205064148) do
 
   create_table "fuguai_tenpukanris", :force => true do |t|
     t.string   "fuguai_no"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(:version => 20130205004759) do
     t.string   "fuguai_no"
     t.string   "bhyo_no"
     t.string   "hakosya"
-    t.string   "hako_ymd"
     t.string   "kenmei"
     t.string   "systemmei"
     t.string   "kotei_kubun"
@@ -45,21 +44,22 @@ ActiveRecord::Schema.define(:version => 20130205004759) do
     t.string   "tyofuku_no"
     t.string   "taisyotenpu_kubun"
     t.text     "kaisekikekka"
-    t.string   "kaito_ymd"
     t.string   "kaitosya"
     t.text     "taisyosyoti"
     t.string   "taisyoyotei_ymd"
-    t.string   "taisyo_ymd"
     t.string   "taisyosya"
     t.string   "taisyobutumei"
-    t.string   "kanryo_ymd"
     t.string   "kakuninsya"
     t.string   "status_kubun"
     t.text     "biko"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.string   "teammei"
-    t.string   "taisyokibo_ymd"
+    t.date     "hako_ymd"
+    t.date     "kaito_ymd"
+    t.date     "taisyo_ymd"
+    t.date     "kanryo_ymd"
+    t.date     "taisyokibo_ymd"
   end
 
   create_table "genins", :force => true do |t|
@@ -74,6 +74,12 @@ ActiveRecord::Schema.define(:version => 20130205004759) do
     t.string   "gyomusizi_meisyo"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "jidousaiban_its", :force => true do |t|
+    t.string   "fuguaino_it"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "keylocks", :force => true do |t|
@@ -144,6 +150,15 @@ ActiveRecord::Schema.define(:version => 20130205004759) do
     t.string   "user_id"
     t.string   "syozoku"
     t.string   "shimei"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "password"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "pass"
+    t.string   "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
