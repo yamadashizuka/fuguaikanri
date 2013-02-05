@@ -95,7 +95,7 @@
                               "小"=>"小"} %>
     </td>
     <th width=90 colspan=1 bgcolor=lightskyblue>対処希望日<font color=red size=1>*</font></th>
-    <td width=90 colspan=2 class="field"><%= f.text_field :taisyoirai_ymd, :size=>15  %></td>
+    <td width=90 colspan=2 class="field"><%= f.text_field :taisyokibo_ymd, :size=>15  %></td>
   </tr>
 
   <tr>
@@ -131,7 +131,7 @@
   <tr>
     <th width=90 colspan=2 bgcolor=lightskyblue>対処依頼先<font color=red size=1>*</font></th>
     <td width=90 colspan=4 class="field">
-        <%= f.select:taisyoirai_ymd,{"オンラインＴ"=>"オンラインＴ",
+        <%= f.select:taisyoirai,{"オンラインＴ"=>"オンラインＴ",
                                  "バッチＴ"=>"バッチＴ",
                                  "移行Ｔ"=>"移行Ｔ",
                                  "共通Ｔ"=>"共通Ｔ",
