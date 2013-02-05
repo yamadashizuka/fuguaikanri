@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205061243) do
+ActiveRecord::Schema.define(:version => 20130205064148) do
 
   create_table "fuguai_tenpukanris", :force => true do |t|
     t.string   "fuguai_no"
@@ -152,9 +152,9 @@ ActiveRecord::Schema.define(:version => 20130205061243) do
     t.string   "shimei"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "password"
   end
 
-<<<<<<< HEAD
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "pass"
@@ -163,6 +163,4 @@ ActiveRecord::Schema.define(:version => 20130205061243) do
     t.datetime "updated_at", :null => false
   end
 
-=======
->>>>>>> d49f4c7b977b9830968ac1d7bcf3627681e48dbf
 end
