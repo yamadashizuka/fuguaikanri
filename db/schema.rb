@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130204014826) do
+ActiveRecord::Schema.define(:version => 20130205004759) do
 
   create_table "fuguai_tenpukanris", :force => true do |t|
     t.string   "fuguai_no"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20130204014826) do
     t.string   "kotei_kubun"
     t.string   "kinomei"
     t.string   "saigensei"
-    t.string   "taisyoirai_ymd"
+    t.string   "taisyoirai"
     t.string   "judaido"
     t.string   "hasseikankyo"
     t.string   "fuguaitenpu_kubun"
@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(:version => 20130204014826) do
     t.text     "biko"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "teammei"
+    t.string   "taisyokibo_ymd"
   end
 
   create_table "genins", :force => true do |t|
@@ -117,6 +119,13 @@ ActiveRecord::Schema.define(:version => 20130204014826) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "teammeis", :force => true do |t|
+    t.string   "teammei_no"
+    t.string   "teammeisyo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "tenpus", :force => true do |t|
     t.string   "tenpu_kubun"
     t.string   "tenpu_meisyo"
@@ -142,7 +151,7 @@ ActiveRecord::Schema.define(:version => 20130204014826) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "pass"
-    t.string   "position"
+    t.string   "mail"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
