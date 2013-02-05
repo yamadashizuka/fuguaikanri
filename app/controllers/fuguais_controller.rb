@@ -50,6 +50,15 @@ class FuguaisController < ApplicationController
       format.json { render json: @fuguai }
     end
   end
+  
+  def new2
+    @fuguai = Fuguai.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @fuguai }
+    end
+  end
 
   # GET /fuguais/1/edit
   def edit

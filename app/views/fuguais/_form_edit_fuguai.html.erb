@@ -48,8 +48,9 @@
                               "ＨＴＣ"=>"ＨＴＣ"} %>
     </td>
     <th width=90 colspan=1 bgcolor=lightskyblue>発行年月日<font color=red size=1>*</font></th>
-    <td width=90 colspan=2 class="field"><%= f.text_field :hako_ymd, :size=>20  %></td>
-
+    <td width=90 colspan=2 class="field">
+       <%= f.text_field :hako_ymd %>
+    </td>
   </tr>
 
   <tr>
@@ -78,8 +79,8 @@
   </tr>
 
   <tr>
-    <th width=90 colspan=2 bgcolor=lightskyblue>機能名<br>(発生箇所名)<font color=red size=1>*</font></th>
-    <td width=90 colspan=5 class="field"><%= f.text_field :kinomei, :size=>30  %></td>
+    <th width=90 colspan=3 bgcolor=lightskyblue>機能名<br>(発生箇所名)<font color=red size=1>*</font></th>
+    <td width=90 colspan=4 class="field"><%= f.text_field :kinomei, :size=>90  %></td>
     <th width=90 colspan=1 bgcolor=lightskyblue>再現性<font color=red size=1>*</font><br>(あり･なし)</th>
     <td width=90 colspan=2 class="field">
         <%= f.select:saigensei,{"あり"=>"あり",
@@ -95,7 +96,9 @@
                               "小"=>"小"} %>
     </td>
     <th width=90 colspan=1 bgcolor=lightskyblue>対処希望日<font color=red size=1>*</font></th>
-    <td width=90 colspan=2 class="field"><%= f.text_field :taisyokibo_ymd, :size=>15  %></td>
+    <td width=90 colspan=2 class="field">
+       <%= f.text_field :taisyokibo_ymd %>
+    </td>
   </tr>
 
   <tr>
@@ -217,7 +220,9 @@
 
   <tr>
     <th width=90 colspan=1 bgcolor=lightgreen>回答日<font color=red size=1>*</font></th>
-    <td width=90 colspan=2><%= f.text_field :kaito_ymd, :size=>15 %></td>
+    <td width=90 colspan=2 class="field">
+       <%= f.text_field :kaito_ymd %>
+    </td>
     <th width=90 colspan=1 bgcolor=lightgreen>回答者<font color=red size=1>*</font></th>
     <td width=90 colspan=3><%= f.text_field :kaitosya, :size=>15 %></td>
   </tr>
@@ -229,11 +234,15 @@
 
   <tr>
     <th width=90 colspan=1 bgcolor=lightgreen>対処予定日<font color=red size=1>*</font></th>
-    <td width=90 colspan=2><%= f.text_field :taisyoyotei_ymd, :size=>15 %></td>
+    <td width=90 colspan=2 class="field">
+       <%= f.text_field :taisyoyotei_ymd %>
+    </td>
     <th width=90 colspan=1 bgcolor=lightgreen>対処日<font color=red size=1>*</font></th>
-    <td width=90 colspan=1><%= f.text_field :taisyo_ymd, :size=>15 %></td>
+    <td width=90 colspan=2 class="field">
+       <%= f.text_field :taisyo_ymd %>
+    </td>
     <th width=90 colspan=1 bgcolor=lightgreen>対処者<font color=red size=1>*</font></th>
-    <td width=90 colspan=3><%= f.text_field :taisyosya, :size=>30 %></td>
+    <td width=90 colspan=2><%= f.text_field :taisyosya, :size=>30 %></td>
   </tr>
 
   <tr>
@@ -243,7 +252,9 @@
 
   <tr>
     <th width=90 colspan=1 bgcolor=lightgreen>完了確認日<font color=red size=1>*</font></th>
-    <td width=90 colspan=2><%= f.text_field :kanryo_ymd, :size=>15 %></td>
+    <td width=90 colspan=2 class="field">
+       <%= f.text_field :kanryo_ymd %>
+    </td>
     <th width=90 colspan=1 bgcolor=lightgreen>完了確認者<font color=red size=1>*</font></th>
     <td width=90 colspan=2><%= f.text_field :kakuninsya, :size=>30 %></td>
     <th width=90 colspan=1 bgcolor=lightgreen>ステータス<font color=red size=1>*</font></th>
