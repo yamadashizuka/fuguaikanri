@@ -1,0 +1,32 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  teammei_no: 1
+  teammeisyo: "オンライン"
+
+two:
+  teammei_no: 2
+  teammeisyo: "バッチ"
+  
+three:
+  teammei_no: 3
+  teammeisyo: "移行"
+   
+four:
+  teammei_no: 4
+  teammeisyo: "共通"
+
+five:
+  teammei_no: 5
+  teammeisyo: "インフラ"
+six:
+  teammei_no: 6
+  teammeisyo: "現行"
+
+seven:
+  teammei_no: 7
+  teammeisyo: "配電"
+
+  
+  
+  
