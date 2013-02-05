@@ -7,7 +7,22 @@ class FuguaisController < ApplicationController
   # GET /fuguais.json
   def index
     @fuguais = Fuguai.all
+    a_hash = Hash.new
+    b_hash = Hash.new    
+    c_hash = Hash.new    
 
+    @fuguais.each do |fuguai|
+     a_hash[fuguai.status_kubun] = fuguai.status_kubun
+     b_hash[fuguai.hakosya] = fuguai.hakosya
+     c_hash[fuguai.hako_ymd] = fuguai.hako_ymd
+    end
+    
+    @statuses = a_hash
+    @hakosyas = b_hash
+    @hakoymds = c_hash
+   
+    
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @fuguais }
@@ -84,4 +99,27 @@ class FuguaisController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def search
+    condition = params['drop_list']['status']
+    @fuguais = Fuguai.where("status_kubun = ?", condition)
+    @fuguais = Fuguai.where("hakosya = ?", condition)
+    @fuguais = Fuguai.where("hako_ymd = ?", condition)
+
+    a_hash = Hash.new
+    b_hash = Hash.new
+    c_hash = Hash.new
+    
+    @fuguais.each do |fuguai|
+     a_hash[fuguai.status_kubun] = fuguai.status_kubun
+     b_hash[fuguai.hakosya] = fuguai.hakosya
+     c_hash[fuguai.hako_ymd] = fuguai.hako_ymd
+    end
+    @statuses = a_hash 
+    @hakosyas = b_hash
+    @hakoymds = c_hash
+
+    render action: "index"
+  end
+  
 end
