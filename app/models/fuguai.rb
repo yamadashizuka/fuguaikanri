@@ -1,5 +1,5 @@
 class Fuguai < ActiveRecord::Base
-  attr_accessible :bhyo_no, :biko, :fuguai_no, :fuguaitenpu_kubun, :genin_kubun, :hako_ymd, :hakosya, :hasseikankyo, :hasseinaiyo, :judaido, :kaisekikekka, :kaito_ymd, :kaitosya, :kakuninsya, :kanryo_ymd, :kenmei, :kensyutukotei, :kinomei, :kotei_kubun, :saigensei, :sihen_no, :status_kubun, :syori_kubun, :systemmei, :taisyo_kubun, :taisyo_ymd, :taisyobutumei, :taisyoirai_ymd, :taisyosya, :taisyosyoti, :taisyotenpu_kubun, :taisyoyotei_ymd, :tyofuku_kubun, :tyofuku_no
+  attr_accessible :bhyo_no, :biko, :fuguai_no, :fuguaitenpu_kubun, :genin_kubun, :hako_ymd, :hakosya, :hasseikankyo, :hasseinaiyo, :judaido, :kaisekikekka, :kaito_ymd, :kaitosya, :kakuninsya, :kanryo_ymd, :kenmei, :kensyutukotei, :kinomei, :kotei_kubun, :saigensei, :sihen_no, :status_kubun, :syori_kubun, :systemmei, :taisyo_kubun, :taisyo_ymd, :taisyobutumei, :taisyoirai, :taisyosya, :taisyosyoti, :taisyotenpu_kubun, :taisyoyotei_ymd, :tyofuku_kubun, :tyofuku_no, :teammei. :taisyokibo_ymd
 
 #入力チェック（ブランクは許しません！）
   validates_presence_of :hakosya
@@ -10,10 +10,9 @@ class Fuguai < ActiveRecord::Base
   validates_presence_of :kinomei
   validates_presence_of :saigensei
   validates_presence_of :judaido
-  validates_presence_of :taisyoirai_ymd
+  validates_presence_of :taisyoirai
   validates_presence_of :hasseikankyo
   validates_presence_of :fuguaitenpu_kubun
-  validates_presence_of :taisyoirai_ymd
   validates_presence_of :hasseinaiyo
   validates_presence_of :genin_kubun
   validates_presence_of :kensyutukotei
