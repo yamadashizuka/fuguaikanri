@@ -1,7 +1,7 @@
 <%= form_for(@fuguai) do |f| %>
   <% if @fuguai.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@fuguai.errors.count, "error") %> prohibited this fuguai from being saved:</h2>
+      <h2><%= pluralize(@fuguai.errors.count, "error") %> prohibited this bugreport from being saved:</h2>
 
       <ul>
       <% @fuguai.errors.full_messages.each do |msg| %>
@@ -11,146 +11,264 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :fuguai_no %><br />
-    <%= f.text_field :fuguai_no %>
-  </div>
-  <div class="field">
-    <%= f.label :bhyo_no %><br />
-    <%= f.text_field :bhyo_no %>
-  </div>
-  <div class="field">
-    <%= f.label :hakosya %><br />
-    <%= f.text_field :hakosya %>
-  </div>
-  <div class="field">
-    <%= f.label :hako_ymd %><br />
-    <%= f.text_field :hako_ymd %>
-  </div>
-  <div class="field">
-    <%= f.label :kenmei %><br />
-    <%= f.text_field :kenmei %>
-  </div>
-  <div class="field">
-    <%= f.label :systemmei %><br />
-    <%= f.text_field :systemmei %>
-  </div>
-  <div class="field">
-    <%= f.label :kotei_kubun %><br />
-    <%= f.text_field :kotei_kubun %>
-  </div>
-  <div class="field">
-    <%= f.label :kinomei %><br />
-    <%= f.text_field :kinomei %>
-  </div>
-  <div class="field">
-    <%= f.label :saigensei %><br />
-    <%= f.text_field :saigensei %>
-  </div>
-  <div class="field">
-    <%= f.label :taisyoirai_ymd %><br />
-    <%= f.text_field :taisyoirai_ymd %>
-  </div>
-  <div class="field">
-    <%= f.label :judaido %><br />
-    <%= f.text_field :judaido %>
-  </div>
-  <div class="field">
-    <%= f.label :hasseikankyo %><br />
-    <%= f.text_field :hasseikankyo %>
-  </div>
-  <div class="field">
-    <%= f.label :fuguaitenpu_kubun %><br />
-    <%= f.text_field :fuguaitenpu_kubun %>
-  </div>
-  <div class="field">
-    <%= f.label :hasseinaiyo %><br />
-    <%= f.text_area :hasseinaiyo %>
-  </div>
-  
-    <div class="field">
-    <%= f.label :genin_kubun %><br />
-    <%= f.text_field :genin_kubun %>
-  </div>
-  <div class="field">
-    <%= f.label :kensyutukotei %><br />
-    <%= f.text_field :kensyutukotei %>
-  </div>
-  <div class="field">
-    <%= f.label :taisyo_kubun %><br />
-    <%= f.text_field :taisyo_kubun %>
-  </div>
-  <div class="field">
-    <%= f.label :sihen_no %><br />
-    <%= f.text_field :sihen_no %>
-  </div>
-  <div class="field">
-    <%= f.label :syori_kubun %><br />
-    <%= f.text_field :syori_kubun %>
-  </div>
-  <div class="field">
-    <%= f.label :tyofuku_kubun %><br />
-    <%= f.text_field :tyofuku_kubun %>
-  </div>
-  <div class="field">
-    <%= f.label :tyofuku_no %><br />
-    <%= f.text_field :tyofuku_no %>
-  </div>
-  <div class="field">
-    <%= f.label :taisyotenpu_kubun %><br />
-    <%= f.text_field :taisyotenpu_kubun %>
-  </div>
-  <div class="field">
-    <%= f.label :kaisekikekka %><br />
-    <%= f.text_area :kaisekikekka %>
-  </div>
-  <div class="field">
-    <%= f.label :kaito_ymd %><br />
-    <%= f.text_field :kaito_ymd %>
-  </div>
-  <div class="field">
-    <%= f.label :kaitosya %><br />
-    <%= f.text_field :kaitosya %>
-  </div>
-  <div class="field">
-    <%= f.label :taisyosyoti %><br />
-    <%= f.text_area :taisyosyoti %>
-  </div>
-  <div class="field">
-    <%= f.label :taisyoyotei_ymd %><br />
-    <%= f.text_field :taisyoyotei_ymd %>
-  </div>
-  <div class="field">
-    <%= f.label :taisyo_ymd %><br />
-    <%= f.text_field :taisyo_ymd %>
-  </div>
-  <div class="field">
-    <%= f.label :taisyosya %><br />
-    <%= f.text_field :taisyosya %>
-  </div>
-  <div class="field">
-    <%= f.label :taisyobutumei %><br />
-    <%= f.text_field :taisyobutumei %>
-  </div>
-  <div class="field">
-    <%= f.label :kanryo_ymd %><br />
-    <%= f.text_field :kanryo_ymd %>
-  </div>
-  <div class="field">
-    <%= f.label :kakuninsya %><br />
-    <%= f.text_field :kakuninsya %>
-  </div>
-  <div class="field">
-    <%= f.label :status_kubun %><br />
-    <%= f.text_field :status_kubun %>
-  </div>
-  <div class="field">
-    <%= f.label :biko %><br />
-    <%= f.text_area :biko %>
-  </div>
-  
+<table border=0 width=1320>
+<tr>
+  <td><font size=7>不具合管理表</font></td>
+  <td>
+    <table border=1 width=300 cellspacing=0 cellpadding=1>
+      <tr bgcolor=lightskyblue>
+        <th>不具合管理No.</th>
+        <td><font color=red size=1>ここには自動採番された値を表示</font></td>
+      </tr>
+      <tr>
+        <th>Ｂ票No.</th>
+        <td class="field"><%= f.text_field :bhyo_no, :size=>15 %></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+
+<hr>
+
+<!-- 不具合情報部分 -->
+<font color=red size=1>(*)必須入力</font>
+<table bgcolor=mintcream border=1 width=950 cellspacing=0 cellpadding=1>
+<tr>
+  <tr>
+    <th  bgcolor=lightskyblue width=10 rowspan=11 >不具合情報</th>
+  </tr>
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightskyblue>発行者<font color=red size=1>*</font></th>
+    <td width=90 colspan=3 class="field">
+        <%= f.select:hakosya,{"営業部"=>"営業部",
+                              "情シ部"=>"情シ部",
+                              "ＣＴＩ"=>"ＣＴＩ",
+                              "ＨＴＣ"=>"ＨＴＣ"} %>
+    </td>
+    <th width=90 colspan=1 bgcolor=lightskyblue>発行年月日<font color=red size=1>*</font></th>
+    <td width=90 colspan=2 class="field"><%= f.text_field :hako_ymd, :size=>20  %></td>
+
+  </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>件名<font color=red size=1>*</font></th>
+    <td width=90 colspan=8 class="field"><%= f.text_field :kenmei, :size=>100  %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>システム名<font color=red size=1>*</font></th>
+    <td width=90 colspan=5 class="field">
+        <%= f.select:systemmei,{"販売システム共通(AA)"=>"販売システム共通(AA)",
+                                "販売契約管理(AF)"=>"販売契約管理(AF)",
+                                "販売検針管理(AG)"=>"販売検針管理(AG)",
+                                "販売料金計算(AH)"=>"販売料金計算(AH)",
+                                "販売請求管理(AJ)"=>"販売請求管理(AJ)",} %>
+    </td>
+    <th width=90 colspan=1 bgcolor=lightskyblue>工程<font color=red size=1>*</font></th>
+    <td width=90 colspan=2 class="field">
+        <%= f.select:kotei_kubun,{"ＩＴ０"=>"ＩＴ０",
+                                  "ＩＴ１"=>"ＩＴ１",
+                                  "ＩＴ２"=>"ＩＴ２",
+                                  "ＳＴ（サイクル）"=>"ＳＴ（サイクル）",
+                                  "ＳＴ（業務処理）"=>"ＳＴ（業務処理）",
+                                  "他システム連係"=>"他システム連係"} %>
+    </td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>機能名<br>(発生箇所名)<font color=red size=1>*</font></th>
+    <td width=90 colspan=5 class="field"><%= f.text_field :kinomei, :size=>30  %></td>
+    <th width=90 colspan=1 bgcolor=lightskyblue>再現性<font color=red size=1>*</font><br>(あり･なし)</th>
+    <td width=90 colspan=2 class="field">
+        <%= f.select:saigensei,{"あり"=>"あり",
+                                "なし"=>"なし"} %>
+    </td>
+ </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>重大度<font color=red size=1>*</font><br>(大・中・小)</th>
+    <td width=90 colspan=1 class="field">
+        <%= f.select:judaido,{"大"=>"大",
+                              "中"=>"中",
+                              "小"=>"小"} %>
+    </td>
+    <th width=90 colspan=1 bgcolor=lightskyblue>対処希望日<font color=red size=1>*</font></th>
+    <td width=90 colspan=2 class="field"><%= f.text_field :taisyoirai_ymd, :size=>15  %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>発生環境<font color=red size=1>*</font></th>
+    <td width=90 colspan=6 class="field">
+        <%= f.select:hasseikankyo,{"サイクルテスト環境"=>"サイクルテスト環境",
+                                   "業務処理テスト環境"=>"業務処理テスト環境",
+                                   "夏季・改定テスト環境"=>"夏季・改定テスト環境",
+                                   "自動検針テスト環境"=>"自動検針テスト環境",
+                                   "現行⇒ＣＩＳ"=>"現行⇒ＣＩＳ",
+                                   "ＣＩＳ⇒現行"=>"ＣＩＳ⇒現行",
+                                   "ＣＩＳ⇒配電"=>"ＣＩＳ⇒配電",
+                                   "本番検証"=>"本番検証"} %>
+    </td>
+
+
+
+  <tr>
+    <th width=90 colspan=8 bgcolor=lightskyblue>発生内容<font color=red size=1>*</font></th>
+    <th width=90 colspan=1 bgcolor=lightskyblue>添付資料<font color=red size=1>*</font></th>
+    <td width=90 colspan=1 class="field">
+        <%= f.select:fuguaitenpu_kubun,{"あり"=>"あり",
+                                        "なし"=>"なし"} %>
+    </td>
+  </tr>
+
+  <tr>
+    <td width=90 colspan=10 height=250 class="field"><%= f.text_area :hasseinaiyo, :size=>"100x15"  %></td>
+
+  </tr>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=2 bgcolor=lightskyblue>対処依頼先<font color=red size=1>*</font></th>
+    <td width=90 colspan=4 class="field">
+        <%= f.select:taisyoirai_ymd,{"オンラインＴ"=>"オンラインＴ",
+                                 "バッチＴ"=>"バッチＴ",
+                                 "移行Ｔ"=>"移行Ｔ",
+                                 "共通Ｔ"=>"共通Ｔ",
+                                 "現行保守Ｔ"=>"現行保守Ｔ",
+                                 "現行配電Ｔ"=>"現行配電Ｔ",
+                                 "インフラＴ"=>"インフラＴ",} %>
+    </td>
+  </tr>
+
+</tr>
+</table>
+
+<!-- 対処情報部分 -->
+<table bgcolor=lightcyan border=1 width=950 cellspacing=0 cellpadding=3>
+<tr>
+  <tr>
+    <th  bgcolor=lightgreen width=10 rowspan=11 >対処情報</th>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>原因区分<font color=red size=1>*</font></th>
+    <td width=90 colspan=2>
+        <%= f.select:genin_kubun,{"仕様不備"=>"仕様不備",
+                                  "設計不備"=>"設計不備",
+                                  "プログラム不備"=>"プログラム不備",
+                                  "データ・環境設定不備"=>"データ・環境設定不備",
+                                  "プログラム配布誤り"=>"プログラム配布誤り",
+                                  "デグレーション"=>"デグレーション",
+                                  "テストケース設定内容不備"=>"テストケース設定内容不備",
+                                  "発行者誤検出"=>"発行者誤検出"} %>
+    </td>
+
+    <th width=90 colspan=2 bgcolor=lightgreen>検出されるべき工程<font color=red size=1>*</font></th>
+    <td width=90 colspan=3>
+        <%= f.select:kensyutukotei,{"ＵＴ"=>"ＵＴ",
+                                    "ＩＴ１"=>"ＩＴ１",
+                                    "ＩＴ２"=>"ＩＴ２",
+                                    "ＳＴ"=>"ＳＴ"} %>
+    </td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処区分<font color=red size=1>*</font></th>
+    <td width=90 colspan=2>
+        <%= f.select:taisyo_kubun,{"修正"=>"修正",
+                                   "対処不要"=>"対処不要",
+                                   "再現待ち"=>"再現待ち",
+                                   "暫定処置"=>"暫定処置",
+                                   "保留"=>"保留"} %>
+    </td>
+    <th width=90 colspan=3 bgcolor=lightgreen>仕様変更管理No.</th>
+    <td width=90 colspan=2><%= f.text_field :sihen_no, :size=>15 %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>処理区分<font color=red size=1>*</font></th>
+    <td width=90 colspan=2>
+        <%= f.select:syori_kubun,{"－"=>"－",
+                                  "不備修正"=>"不備修正",
+                                  "仕様変更"=>"仕様変更"} %>
+    </td>
+    <th width=90 colspan=1 bgcolor=lightgreen>重複区分<font color=red size=1>*</font></th>
+    <td width=90 colspan=1>
+        <%= f.select:tyofuku_kubun,{"あり"=>"あり",
+                                    "なし"=>"なし"} %>
+    </td>
+    <th width=90 colspan=3 bgcolor=lightgreen>重複不具合No.</th>
+    <td width=90 colspan=3><%= f.text_field :tyofuku_no, :size=>15 %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=4 bgcolor=lightgreen>解析結果/原因<font color=red size=1>*</font></th>
+    <th width=90 colspan=3 bgcolor=lightgreen>対処添付資料区分<font color=red size=1>*</font></th>
+    <td width=90 colspan=2>
+        <%= f.select:taisyotenpu_kubun,{"あり"=>"あり",
+                                       "なし"=>"なし"} %>
+    </td>
+  </tr>
+
+  <tr>
+    <td width=90 colspan=11 height=250><%= f.text_area :kaisekikekka, :size=>"100x15" %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>回答日<font color=red size=1>*</font></th>
+    <td width=90 colspan=2><%= f.text_field :kaito_ymd, :size=>15 %></td>
+    <th width=90 colspan=1 bgcolor=lightgreen>回答者<font color=red size=1>*</font></th>
+    <td width=90 colspan=3><%= f.text_field :kaitosya, :size=>15 %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処処置<font color=red size=1>*</font></th>
+    <td width=90 colspan=10 height=80><%= f.text_area :taisyosyoti, :size=>"80x5" %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処予定日<font color=red size=1>*</font></th>
+    <td width=90 colspan=2><%= f.text_field :taisyoyotei_ymd, :size=>15 %></td>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処日<font color=red size=1>*</font></th>
+    <td width=90 colspan=1><%= f.text_field :taisyo_ymd, :size=>15 %></td>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処者<font color=red size=1>*</font></th>
+    <td width=90 colspan=3><%= f.text_field :taisyosya, :size=>30 %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>対処物名称<font color=red size=1>*</font></th>
+    <td width=90 colspan=10 height=80><%= f.text_area :taisyobutumei, :size=>"90x3" %></td>
+  </tr>
+
+  <tr>
+    <th width=90 colspan=1 bgcolor=lightgreen>完了確認日<font color=red size=1>*</font></th>
+    <td width=90 colspan=2><%= f.text_field :kanryo_ymd, :size=>15 %></td>
+    <th width=90 colspan=1 bgcolor=lightgreen>完了確認者<font color=red size=1>*</font></th>
+    <td width=90 colspan=2><%= f.text_field :kakuninsya, :size=>30 %></td>
+    <th width=90 colspan=1 bgcolor=lightgreen>ステータス<font color=red size=1>*</font></th>
+    <td width=90 colspan=4>
+        <%= f.select:status_kubun,{"open"=>"open",
+                                   "close"=>"close"} %>
+    </td>
+  </tr>
+
+</tr>
+</table>
+
+<!-- 備考部分 -->
+<table bgcolor=floralwhite border=1 width=950 cellspacing=0 cellpadding=3>
+<tr>
+  <tr>
+    <th bgcolor=lightpink width=10 height=150>備考</th>
+    <td><%= f.text_area :biko, :size=>"100x8" %></td>
+  </tr>
+</tr>
+</table>
+
+<br><hr><br>
+
   <div class="actions">
     <%= f.submit %>
   </div>
-
 <% end %>
