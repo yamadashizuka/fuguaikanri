@@ -42,11 +42,13 @@
   <tr>
     <th width=90 colspan=1 bgcolor=lightskyblue>発行者<font color=red size=1>*</font></th>
     <td width=90 colspan=3 class="field">
-        <%= f.select:hakosya,{"営業部"=>"営業部",
+        <%= f.select:teammei,{"営業部"=>"営業部",
                               "情シ部"=>"情シ部",
                               "ＣＴＩ"=>"ＣＴＩ",
                               "ＨＴＣ"=>"ＨＴＣ"} %>
     </td>
+    
+    <td width=90 colspan=3 class="field"><%= f.text_field :hakosya, :size=>20  %></td>
     <th width=90 colspan=1 bgcolor=lightskyblue>発行年月日<font color=red size=1>*</font></th>
     <td width=90 colspan=2 class="field"><%= f.text_field :hako_ymd, :size=>20  %></td>
 
