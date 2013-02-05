@@ -101,10 +101,21 @@ class FuguaisController < ApplicationController
   end
   
   def search
-    condition = params['drop_list']['status']
-    @fuguais = Fuguai.where("status_kubun = ?", condition)
-    @fuguais = Fuguai.where("hakosya = ?", condition)
-    @fuguais = Fuguai.where("hako_ymd = ?", condition)
+    condition_status = params['drop_list']['status']
+    condition_hakosya = params['drop_list']['hakosya']
+    condition_hakoymd = params['drop_list']['hakoymd']
+    
+    if !(condition_status.nil?)
+       @fuguais = Fuguai.where("status_kubun = ?", condition_status)
+    end
+    
+    if !(condition_hakosya.nil?)
+    @fuguais = Fuguai.where("hakosya = ?", condition_hakosya)
+    end
+    
+    if !(condition_hakoymd.nil?)
+    @fuguais = Fuguai.where("hako_ymd = ?", condition_hakoymd)
+    end
 
     a_hash = Hash.new
     b_hash = Hash.new
