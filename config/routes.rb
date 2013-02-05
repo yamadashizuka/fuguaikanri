@@ -1,6 +1,9 @@
 Fuguaikanri::Application.routes.draw do
 
   match 'fuguais/gyosen' => 'fuguais#gyosen'
+
+  match 'fuguais/search' => 'fuguais#search'
+
   resources :fuguais
 
 #ルートにアクセスしてきたらtopメソッドを起動してtop.htmlを表示
