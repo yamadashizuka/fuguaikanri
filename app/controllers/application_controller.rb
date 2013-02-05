@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
 #
 #  private
 #  def basic_auth
-#      authenticate_or_request_with_http_basic('bugreport') do |params_name, params_pass|
-#        @log = User.where(:name => params_name, :pass => params_pass).first
+#      authenticate_or_request_with_http_basic('fuguais') do |p_user_id, p_pass|
+#        @log = Userkanri.where(:user_id => p_user_id, :passowrd => p_pass).first
 #        if @log
 #           return true
 #        end
