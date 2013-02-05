@@ -1,0 +1,89 @@
+<h1>不具合一覧</h1>
+
+<table>
+  <tr>
+    <th>不具合管理No</th>
+    <th>Ｂ票管理No</th>
+    <th>発行者</th>
+    <th>発効日</th>
+    <th>件名</th>
+    <th>システム名</th>
+    <th>工程</th>
+    <th>機能名（発生箇所名）</th>
+    <th>再現性</th>
+    <th>対処希望日</th>
+    <th>重大度</th>
+    <th>発生環境</th>
+    <th>不具合添付資料</th>
+    <th>発生内容</th>
+    <th>原因区分</th>
+    <th>検出されるべきテスト工程</th>
+    <th>対処区分</th>
+    <th>仕様変更管理No</th>
+    <th>処理区分</th>
+    <th>重複</th>
+    <th>重複不具合No（初出）</th>
+    <th>対処添付資料区分</th>
+    <th>解析結果</th>
+    <th>回答日</th>
+    <th>回答者</th>
+    <th>対処処置</th>
+    <th>対処予定日</th>
+    <th>対処日</th>
+    <th>対処者</th>
+    <th>対象物名称</th>
+    <th>完了確認日</th>
+    <th>確認者</th>
+    <th>ステータス区分</th>
+    <th>備考</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fuguais.each do |fuguai| %>
+  <tr>
+    <td><%= fuguai.fuguai_no %></td>
+    <td><%= fuguai.bhyo_no %></td>
+    <td><%= fuguai.hakosya %></td>
+    <td><%= fuguai.hako_ymd %></td>
+    <td><%= fuguai.kenmei %></td>
+    <td><%= fuguai.systemmei %></td>
+    <td><%= fuguai.kotei_kubun %></td>
+    <td><%= fuguai.kinomei %></td>
+    <td><%= fuguai.saigensei %></td>
+    <td><%= fuguai.taisyoirai_ymd %></td>
+    <td><%= fuguai.judaido %></td>
+    <td><%= fuguai.hasseikankyo %></td>
+    <td><%= fuguai.fuguaitenpu_kubun %></td>
+    <td><%= fuguai.hasseinaiyo %></td>
+    <td><%= fuguai.genin_kubun %></td>
+    <td><%= fuguai.kensyutukotei %></td>
+    <td><%= fuguai.taisyo_kubun %></td>
+    <td><%= fuguai.sihen_no %></td>
+    <td><%= fuguai.syori_kubun %></td>
+    <td><%= fuguai.tyofuku_kubun %></td>
+    <td><%= fuguai.tyofuku_no %></td>
+    <td><%= fuguai.taisyotenpu_kubun %></td>
+    <td><%= fuguai.kaisekikekka %></td>
+    <td><%= fuguai.kaito_ymd %></td>
+    <td><%= fuguai.kaitosya %></td>
+    <td><%= fuguai.taisyosyoti %></td>
+    <td><%= fuguai.taisyoyotei_ymd %></td>
+    <td><%= fuguai.taisyo_ymd %></td>
+    <td><%= fuguai.taisyosya %></td>
+    <td><%= fuguai.taisyobutumei %></td>
+    <td><%= fuguai.kanryo_ymd %></td>
+    <td><%= fuguai.kakuninsya %></td>
+    <td><%= fuguai.status_kubun %></td>
+    <td><%= fuguai.biko %></td>
+    <td><%= link_to 'Show', fuguai %></td>
+    <td><%= link_to 'Edit', edit_fuguai_path(fuguai) %></td>
+    <td><%= link_to 'Destroy', fuguai, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fuguai', new_fuguai_path %>
