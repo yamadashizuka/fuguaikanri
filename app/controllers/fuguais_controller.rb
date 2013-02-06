@@ -90,13 +90,12 @@ respond_to do |format|
     @newjidousaiban = JidousaibanIt.new()
     @newjidousaiban.fuguaino_it = newnum
     @fuguai.fuguai_no = newnum
-   @newjidousaiban.save()
-    
-    
-    
+   
       if @fuguai.save
         format.html { redirect_to @fuguai, notice: 'Fuguai was successfully created.' }
         format.json { render json: @fuguai, status: :created, location: @fuguai }
+        @newjidousaiban.save()
+        
       else
         format.html { render action: "new" }
         format.json { render json: @fuguai.errors, status: :unprocessable_entity }

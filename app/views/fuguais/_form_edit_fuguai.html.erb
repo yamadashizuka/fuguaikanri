@@ -42,18 +42,16 @@
   <tr>
     <th width=90 colspan=1 bgcolor=lightskyblue>発行者<font color=red size=1>*</font></th>
     <td width=90 colspan=3 class="field">
-
-        <%= f.select :teammei, @teammeis.collect{ |t| [t.teammeisyo] } %></TD>
-
- <!--
-        <#%= f.select:teammei,{"営業部"=>"営業部",
-#                              "情シ部"=>"情シ部",
-#                             "ＣＴＩ"=>"ＣＴＩ",
-#                              "ＨＴＣ"=>"ＨＴＣ"} %>
-#   </td>
+<!--
+        <#%= f.select :teammei, @teammeis.collect{ |t| [t.teammeisyo] } %></TD>
 -->
+        <%= f.select:teammei,{"営業部"=>"営業部",
+                              "情シ部"=>"情シ部",
+                             "ＣＴＩ"=>"ＣＴＩ",
+                              "ＨＴＣ"=>"ＨＴＣ"} %>
+   </td>
  
-    <td width=90 colspan=3 class="field"><%= f.text_field :hakosya, :size=>20  %></td>
+    <td width=90 colspan=3 class="field"><%= f.text_field :hakosya, :size=>20 %></td>
     <th width=90 colspan=1 bgcolor=lightskyblue>発行年月日<font color=red size=1>*</font></th>
     <td width=90 colspan=2 class="field">
        <%= f.date_select :hako_ymd %>
