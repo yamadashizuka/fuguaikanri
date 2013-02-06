@@ -77,7 +77,16 @@
   </tr>
 
   <tr>
-    <td width=90 height=250 colspan=10 ><%= @fuguai.hasseinaiyo %></td>
+    <td width=90 height=250 colspan=10 ><%= @fuguai.hasseinaiyo %><br><br>
+     <% if !(@fuguai.tenpu_url.to_s.blank?) %>
+       <%= image_tag @fuguai.tenpu_url.to_s, :width => "800" %>
+     <% end %>  
+    <br><br>
+     <% if !(@fuguai.tenpu2_url.to_s.blank?) %>
+       <%= image_tag @fuguai.tenpu2_url.to_s, :width => "800" %>
+     <% end %>  
+       
+       </td>
   </tr>
 
 

@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 class FuguaisController < ApplicationController
   #業務選択画面用メソッド
   def gyosen
@@ -69,7 +71,7 @@ class FuguaisController < ApplicationController
   # POST /fuguais.json
   def create
     @fuguai = Fuguai.new(params[:fuguai])
-
+   
     respond_to do |format|
       if @fuguai.save
         format.html { redirect_to @fuguai, notice: 'Fuguai was successfully created.' }
@@ -84,8 +86,8 @@ class FuguaisController < ApplicationController
   # PUT /fuguais/1
   # PUT /fuguais/1.json
   def update
-    @fuguai = Fuguai.find(params[:id])
 
+    @fuguai = Fuguai.find(params[:id])
     respond_to do |format|
       if @fuguai.update_attributes(params[:fuguai])
         format.html { redirect_to @fuguai, notice: 'Fuguai was successfully updated.' }
@@ -114,7 +116,8 @@ class FuguaisController < ApplicationController
     condition_hakosya = params['drop_list']['hakosya']
     condition_hakoymd = params['drop_list']['hakoymd']
     
-    if !(condition_status.nil?)
+        puts "----" + condition_status
+   if !(condition_status.blank?)
        @fuguais = Fuguai.where("status_kubun = ?", condition_status)
     end
     

@@ -1,5 +1,25 @@
 <center><h1>不具合管理簿</h1></center>
 
+<font color="brown"><b>■絞込み条件</b></font>
+<BR>
+<%= form_tag :action => 'search' %>
+ステータス：
+<%= select( "drop_list", "status", @statuses,  :prompt => "選択してください") %>
+<%= submit_tag "検索"%>
+&nbsp;
+
+<%= form_tag :action => 'search' %>
+発行者：
+<%= select( "drop_list", "hakosya", @hakosyas) %>
+<%= submit_tag "検索"%>
+&nbsp;
+
+<%= form_tag :action => 'search' %>
+発行日：
+<%= select( "drop_list", "hakoymd", @hakoymds) %>
+<%= submit_tag "検索"%>
+</form>
+
 <!--
 <table>
 -->
@@ -64,7 +84,7 @@
     <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">ステータス</th>
     <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">備考</th>
     <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">詳細</th>
-    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">修正</th>
+    <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">訂正</th>
     <th style="border:2px solid #000000;background-color:#808080;color:#FFFFFF;text-align:center;">削除</th>
     <!--
     <th></th>
@@ -142,23 +162,7 @@
 </div>
 <br />
 
-<%= form_tag :action => 'search' %>
-ステータス：
-<%= select( "drop_list", "status", @statuses) %>
-<%= submit_tag "検索"%>
-</form>
 
-<%= form_tag :action => 'search' %>
-発行者：
-<%= select( "drop_list", "hakosya", @hakosyas) %>
-<%= submit_tag "検索"%>
-</form>
-
-<%= form_tag :action => 'search' %>
-発行日：
-<%= select( "drop_list", "hakoymd", @hakoymds) %>
-<%= submit_tag "検索"%>
-</form>
 
 <%= link_to '新規登録', new_fuguai_path %>
 <%= link_to '一覧検索', fuguais_path %>
