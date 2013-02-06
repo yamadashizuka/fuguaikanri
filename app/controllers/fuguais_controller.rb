@@ -7,7 +7,7 @@ class FuguaisController < ApplicationController
   # GET /fuguais.json
   def index
     @fuguais = Fuguai.all
-    
+
     a_hash = Hash.new
     b_hash = Hash.new    
     c_hash = Hash.new    
@@ -44,6 +44,7 @@ class FuguaisController < ApplicationController
   # GET /fuguais/new.json
   def new
     @fuguai = Fuguai.new
+    @teammeis = Teammei.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -53,7 +54,7 @@ class FuguaisController < ApplicationController
   
   def new2
     @fuguai = Fuguai.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @fuguai }
@@ -63,6 +64,7 @@ class FuguaisController < ApplicationController
   # GET /fuguais/1/edit
   def edit
     @fuguai = Fuguai.find(params[:id])
+    @teammeis = Teammei.all    
   end
 
   # POST /fuguais
