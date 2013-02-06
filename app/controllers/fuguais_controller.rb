@@ -7,6 +7,7 @@ class FuguaisController < ApplicationController
   # GET /fuguais.json
   def index
     @fuguais = Fuguai.all
+    
     a_hash = Hash.new
     b_hash = Hash.new    
     c_hash = Hash.new    
@@ -20,12 +21,11 @@ class FuguaisController < ApplicationController
     @statuses = a_hash
     @hakosyas = b_hash
     @hakoymds = c_hash
-   
-    
-    
+ 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @fuguais }
+      format.csv { send_data Fuguai.to_csv }
     end
   end
 
