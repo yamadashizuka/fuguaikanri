@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130206002514) do
+ActiveRecord::Schema.define(:version => 20130206035941) do
 
   create_table "fuguai_tenpukanris", :force => true do |t|
     t.string   "fuguai_no"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(:version => 20130206002514) do
     t.date     "kanryo_ymd"
     t.date     "taisyokibo_ymd"
     t.date     "taisyoyotei_ymd"
+    t.string   "tenpu"
+    t.string   "tenpu2"
   end
 
   create_table "genins", :force => true do |t|
@@ -123,6 +125,7 @@ ActiveRecord::Schema.define(:version => 20130206002514) do
     t.string   "tenpu"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "fuguai_id"
   end
 
   create_table "teammeis", :force => true do |t|
@@ -153,6 +156,14 @@ ActiveRecord::Schema.define(:version => 20130206002514) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "password"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "pass"
+    t.string   "mail"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

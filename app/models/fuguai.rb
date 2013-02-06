@@ -1,5 +1,7 @@
 class Fuguai < ActiveRecord::Base
-  attr_accessible :bhyo_no, :biko, :fuguai_no, :fuguaitenpu_kubun, :genin_kubun, :hako_ymd, :hakosya, :hasseikankyo, :hasseinaiyo, :judaido, :kaisekikekka, :kaito_ymd, :kaitosya, :kakuninsya, :kanryo_ymd, :kenmei, :kensyutukotei, :kinomei, :kotei_kubun, :saigensei, :sihen_no, :status_kubun, :syori_kubun, :systemmei, :taisyo_kubun, :taisyo_ymd, :taisyobutumei, :taisyoirai, :taisyosya, :taisyosyoti, :taisyotenpu_kubun, :taisyoyotei_ymd, :tyofuku_kubun, :tyofuku_no, :teammei, :taisyokibo_ymd
+  attr_accessible :bhyo_no, :biko, :fuguai_no, :fuguaitenpu_kubun, :genin_kubun, :hako_ymd, :hakosya, :hasseikankyo, :hasseinaiyo, :judaido, :kaisekikekka, :kaito_ymd, :kaitosya, :kakuninsya, :kanryo_ymd, :kenmei, :kensyutukotei, :kinomei, :kotei_kubun, :saigensei, :sihen_no, :status_kubun, :syori_kubun, :systemmei, :taisyo_kubun, :taisyo_ymd, :taisyobutumei, :taisyoirai, :taisyosya, :taisyosyoti, :taisyotenpu_kubun, :taisyoyotei_ymd, :tyofuku_kubun, :tyofuku_no, :teammei, :taisyokibo_ymd, :tenpu, :tenpu2
+  mount_uploader :tenpu, TenpuUploader
+  mount_uploader :tenpu2, TenpuUploader
 
 
 #入力チェック（ブランクは許しません！）
@@ -39,7 +41,7 @@ class Fuguai < ActiveRecord::Base
       row = Array.new
       row.push(fuguai.fuguai_no.encode("Shift_JIS"))
       row.push(fuguai.hakosya.encode("Shift_JIS"))
-      row.push(fuguai.hako_ymd.encode("Shift_JIS"))
+      row.push(fuguai.hako_ymd)
       row.push(fuguai.kenmei.encode("Shift_JIS"))
       row.push(fuguai.saigensei.encode("Shift_JIS"))
       row.push(fuguai.judaido.encode("Shift_JIS"))
@@ -48,9 +50,9 @@ class Fuguai < ActiveRecord::Base
       row.push(fuguai.taisyo_kubun.encode("Shift_JIS"))
       row.push(fuguai.sihen_no.encode("Shift_JIS"))
       row.push(fuguai.tyofuku_kubun.encode("Shift_JIS"))
-      row.push(fuguai.taisyoyotei_ymd.encode("Shift_JIS"))
-      row.push(fuguai.taisyo_ymd.encode("Shift_JIS"))
-      row.push(fuguai.kanryo_ymd.encode("Shift_JIS"))
+      row.push(fuguai.taisyoyotei_ymd)
+      row.push(fuguai.taisyo_ymd)
+      row.push(fuguai.kanryo_ymd)
       row.push(fuguai.status_kubun.encode("Shift_JIS"))
       row.push(fuguai.biko.encode("Shift_JIS"))
       csv << row
