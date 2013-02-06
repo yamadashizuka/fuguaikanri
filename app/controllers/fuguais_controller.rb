@@ -74,9 +74,22 @@ puts "=====logout======"
   # POST /fuguais
   # POST /fuguais.json
   def create
+  
+  
     @fuguai = Fuguai.new(params[:fuguai])
+respond_to do |format|
+ 
+    maxnum=JidousaibanIt.maximum(:fuguaino_it)
+    @jidousaiban = JidousaibanIt.where(:fuguaino_it => maxnum).first()
+    newnum = @jidousaiban.jidousaiban_it()
 
-    respond_to do |format|
+    @newjidousaiban = JidousaibanIt.new()
+    @newjidousaiban.fuguaino_it = newnum
+    @fuguai.fuguai_no = newnum
+   @newjidousaiban.save()
+    
+    
+    
       if @fuguai.save
         format.html { redirect_to @fuguai, notice: 'Fuguai was successfully created.' }
         format.json { render json: @fuguai, status: :created, location: @fuguai }
@@ -93,7 +106,8 @@ puts "=====logout======"
     @fuguai = Fuguai.find(params[:id])
 
     respond_to do |format|
-      if @fuguai.update_attributes(params[:fuguai])
+ 
+     if @fuguai.update_attributes(params[:fuguai])
         format.html { redirect_to @fuguai, notice: 'Fuguai was successfully updated.' }
         format.json { head :no_content }
       else
