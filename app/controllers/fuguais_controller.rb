@@ -7,6 +7,7 @@ class FuguaisController < ApplicationController
   # GET /fuguais.json
   def index
     @fuguais = Fuguai.all
+    
     a_hash = Hash.new
     b_hash = Hash.new    
     c_hash = Hash.new    
@@ -20,12 +21,11 @@ class FuguaisController < ApplicationController
     @statuses = a_hash
     @hakosyas = b_hash
     @hakoymds = c_hash
-   
-    
-    
+ 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @fuguais }
+      format.csv { send_data Fuguai.to_csv }
     end
   end
 
@@ -50,6 +50,15 @@ class FuguaisController < ApplicationController
       format.json { render json: @fuguai }
     end
   end
+  
+  def new2
+    @fuguai = Fuguai.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @fuguai }
+    end
+  end
 
   # GET /fuguais/1/edit
   def edit
@@ -59,9 +68,22 @@ class FuguaisController < ApplicationController
   # POST /fuguais
   # POST /fuguais.json
   def create
+  
+  
     @fuguai = Fuguai.new(params[:fuguai])
+respond_to do |format|
+ 
+    maxnum=JidousaibanIt.maximum(:fuguaino_it)
+    @jidousaiban = JidousaibanIt.where(:fuguaino_it => maxnum).first()
+    newnum = @jidousaiban.jidousaiban_it()
 
-    respond_to do |format|
+    @newjidousaiban = JidousaibanIt.new()
+    @newjidousaiban.fuguaino_it = newnum
+    @fuguai.fuguai_no = newnum
+   @newjidousaiban.save()
+    
+    
+    
       if @fuguai.save
         format.html { redirect_to @fuguai, notice: 'Fuguai was successfully created.' }
         format.json { render json: @fuguai, status: :created, location: @fuguai }
@@ -78,7 +100,8 @@ class FuguaisController < ApplicationController
     @fuguai = Fuguai.find(params[:id])
 
     respond_to do |format|
-      if @fuguai.update_attributes(params[:fuguai])
+ 
+     if @fuguai.update_attributes(params[:fuguai])
         format.html { redirect_to @fuguai, notice: 'Fuguai was successfully updated.' }
         format.json { head :no_content }
       else

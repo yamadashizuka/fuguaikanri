@@ -3,16 +3,16 @@ class ApplicationController < ActionController::Base
 
 
 #ベーシック認証に関する記述
-# before_filter :basic_auth
-#
-#  private
-#  def basic_auth
-#      authenticate_or_request_with_http_basic('bugreport') do |params_name, params_pass|
-#        @log = User.where(:name => params_name, :pass => params_pass).first
-#        if @log
-#           return true
-#        end
-#      end
-#  end
+ before_filter :basic_auth
+
+  private
+  def basic_auth
+      authenticate_or_request_with_http_basic('fuguais') do |p_user_id, p_pass|
+        @log = Userkanri.where(:user_id => p_user_id, :password => p_pass).first
+        if @log
+           return true
+        end
+      end
+  end
 
 end

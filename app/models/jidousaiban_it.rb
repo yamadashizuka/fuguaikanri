@@ -7,3 +7,4 @@ def jidousaiban_it
   return moji
 end
 end
+
