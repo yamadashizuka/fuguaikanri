@@ -125,7 +125,6 @@ ActiveRecord::Schema.define(:version => 20130206035941) do
     t.string   "tenpu"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "fuguai_id"
   end
 
   create_table "teammeis", :force => true do |t|
@@ -161,7 +160,7 @@ ActiveRecord::Schema.define(:version => 20130206035941) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "pass"
-    t.string   "mail"
+    t.string   "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -51,7 +51,7 @@
                               "ＨＴＣ"=>"ＨＴＣ"} %>
    </td>
  
-    <td width=90 colspan=3 class="field"><%= f.text_field :hakosya, :size=>20 %></td>
+    <td width=90 colspan=3 class="field"><%= f.text_field :hakosya, :size=>20, :value=>session[:shimei] %></td>
     <th width=90 colspan=1 bgcolor=lightskyblue>発行年月日<font color=red size=1>*</font></th>
     <td width=90 colspan=2 class="field">
        <%= f.date_select :hako_ymd %>
