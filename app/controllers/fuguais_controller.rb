@@ -3,6 +3,12 @@ class FuguaisController < ApplicationController
   def gyosen
   end
 
+  #ログアウト画面
+  def logout
+puts "=====logout======"
+    reset_session
+  end
+
   # GET /fuguais
   # GET /fuguais.json
   def index

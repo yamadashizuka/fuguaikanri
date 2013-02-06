@@ -3,7 +3,7 @@
 
 <center>
 <br><br>
- <h7>ようこそ<%= @log.user_id %>さん</h7>
+ <h7>ようこそ<%= session[:shimei] %>さん</h7>
 <br><br><br><br><br><br>
 </center>
 
@@ -11,4 +11,10 @@
 <font size="8"><%= link_to '一覧', fuguais_path %></font><br><br><br>
 <font size="8"><%= link_to '新規作成', new_fuguai_path %></font>
 </center>
+<br><br><br><br>
 
+<center>
+<%= link_to 'ログアウトする', fuguais_logout_path %>
+</center>
+
+<%= render 'form_footer' %>

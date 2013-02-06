@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205064148) do
+ActiveRecord::Schema.define(:version => 20130206002514) do
 
   create_table "fuguai_tenpukanris", :force => true do |t|
     t.string   "fuguai_no"
@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(:version => 20130205064148) do
     t.text     "kaisekikekka"
     t.string   "kaitosya"
     t.text     "taisyosyoti"
-    t.string   "taisyoyotei_ymd"
     t.string   "taisyosya"
     t.string   "taisyobutumei"
     t.string   "kakuninsya"
@@ -60,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20130205064148) do
     t.date     "taisyo_ymd"
     t.date     "kanryo_ymd"
     t.date     "taisyokibo_ymd"
+    t.date     "taisyoyotei_ymd"
   end
 
   create_table "genins", :force => true do |t|
